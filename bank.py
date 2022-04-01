@@ -9,7 +9,7 @@ class Banque:
 
 
 class Client:
-
+    clients = {}
     def __init__(self, idCient = None, nom = "none", adresse ="none", motDePasse=None):
         self.idClient = idCient
         self.nom = nom
@@ -30,30 +30,31 @@ class Operations:
         self.libelle=libelle
         self.date=datetime.datetime.now
 
-    def withdraw(self, amount):
+    def Ouvrircompte(self, Numero):
+        f = open("Database.txt", "a")
+        f.write("\n")
+
+
+    def debiter(self, amount, Numero):
         if self.compte['solde'] >= amount:
             self.compte['holdings'] -= amount
-            print()
-            print("le montant de retrait : {} .".format(amount))
-            self.solde()
+            print("\nle montant de retrait : {} .".format(amount))
         else:
-            print()
-            print("Not enough funds!")
-            self.solde()
+            print("\nPas assez d'argent!")
 
-    def deposit(self, amount):
-        self.compte['holdings'] += amount
-        print()
-        print("The sum of {} has been added to your account balance.".format(amount))
-        self.solde()
+    def crediter(self, Solde):
+        Solde += self.somme
+        print("\nnew montant : {} ".format(Solde))
 
-    def balance(self):
-        print()
-        print("Votre solde actuelle : {} ".format(self.compte['solde']))
+   
+    def EffectVir(self,dist,libelle):
+        self.dist=
+        pass
+        
         
 
-
-class Compte:
+#from Operations import *
+class Compte(Operations):
     def __init__(self, Numero = None, Solde = 0):
         self.Numero = Numero
         self.Solde = Solde
