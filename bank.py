@@ -1,5 +1,8 @@
+import datetime
+
+
 class Banque:
-    def init(self, nom = "none", swift = "none"):
+    def __init__(self, nom = "none", swift = "none"):
         self.nom = nom
         self.swift = swift
 
@@ -7,7 +10,7 @@ class Banque:
 
 class Client:
 
-    def init(self, idCient = None, nom = "none", adresse ="none", motDePasse=None):
+    def __init__(self, idCient = None, nom = "none", adresse ="none", motDePasse=None):
         self.idClient = idCient
         self.nom = nom
         self.adresse = adresse
@@ -19,6 +22,14 @@ class Client:
         else:
             print("access denied")
 
+
+
+class Operations:
+    def __init__(self,somme,libelle,):
+        self.somme=somme
+        self.libelle=libelle
+        self.date=datetime.datetime.now
+        
 
 
 class Compte:
