@@ -29,6 +29,27 @@ class Operations:
         self.somme=somme
         self.libelle=libelle
         self.date=datetime.datetime.now
+
+    def withdraw(self, amount):
+        if self.compte['solde'] >= amount:
+            self.compte['holdings'] -= amount
+            print()
+            print("le montant de retrait : {} .".format(amount))
+            self.solde()
+        else:
+            print()
+            print("Not enough funds!")
+            self.solde()
+
+    def deposit(self, amount):
+        self.compte['holdings'] += amount
+        print()
+        print("The sum of {} has been added to your account balance.".format(amount))
+        self.solde()
+
+    def balance(self):
+        print()
+        print("Votre solde actuelle : {} ".format(self.compte['solde']))
         
 
 
