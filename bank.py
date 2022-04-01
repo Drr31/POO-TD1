@@ -25,7 +25,7 @@ class Client:
 
 
 class Operations:
-    def __init__(self,somme,libelle,):
+    def __init__(self,somme,libelle):
         self.somme=somme
         self.libelle=libelle
         self.date=datetime.datetime.now
@@ -36,3 +36,4 @@ class Compte:
     def __init__(self, Numero = None, Solde = 0):
         self.Numero = Numero
         self.Solde = Solde
+
