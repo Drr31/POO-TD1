@@ -1,60 +1,88 @@
-# En Cadre de ma formation ISTY IATIC3/POO/Python/TD3
-Le but de ce TD est d'analyser, concevoir et réaliser partiellement le système
-informatique d'une banque (simplifié)
+Projet Python - Gestion bancaire simplifiée
 
-Description du sujet :
-Une banque gère un ensemble de comptes et un ensemble de clients. Un client
-possède un nom et une adresse.
-Un client peut posséder plusieurs comptes mais un compte n'appartient qu'à un
-seul client.
-Tout compte possède un numéro et un solde et est associé à des opérations.
-Une opération peut être un débit ou un crédit, s'effectue à une date précise et
-possède un libellé optionnel. Deux types de comptes sont à considérer : les
-comptes courants et les comptes sur livret. Les comptes sur livret sont
-rémunérés : une fois par an, des intérêts sont calculés et ajoutés au solde du
-compte. Le taux d'intérêt en pourcentage d'un compte sur livret est précisé lors
-de la création du compte.
-Les opérations que l'on veut pouvoir réaliser sont les suivantes :
-- Ouvrir un compte : Un client ouvre un compte courant ou sur livret et y
-dépose une somme initiale.
-- Débiter : Cette opération consiste à retirer une somme d'argent d'un
-compte. Le débit doit être enregistré dans la liste des opérations
-associées au compte.
-- Créditer : Cette opération consiste à déposer une somme d'argent sur un
-compte. Le crédit doit être enregistré dans la liste des opérations
-associées au compte.
-- Effectuer un virement : Dans cette opération, une somme d'argent est
-transférée d'un compte source A vers un compte cible B. Le virement doit
-être enregistré comme un débit au niveau de la source et comme un crédit
-au niveau de la cible. Les libellés des opérations crédit et débit doivent
-indiquer que ces opérations ont été réalisées dans le contexte d'un
-virement.
+En Cadre de ma formation ISTY / IATIC3 / POO / Python / TD3
 
-- Créditer les intérêts : Cette opération calcule le montant des intérêts et
-crédite cette somme sur le compte concerné. Le libellé de l'opération doit
-indiquer ce type de crédit particulier.
-- Envoyer un relevé : Cette opération permet l'envoi du relevé des
-opérations du mois courant à un client donné.
-Ce relevé comporte le solde ainsi que la liste chronologique des
-opérations de chaque compte du client.
-Remarques et contraintes
-_ Les sommes sont des entiers.
-_ Le solde d'un compte ne peut jamais être négatif.
-_ Le montant des intérêts d'un compte sur livret est calculé par la formule
-suivante : montant = solde _taux=100 (calcul en double précision puis
-transformation du résultat en entier).
+Ce projet a pour but d'analyser, concevoir et implémenter partiellement un système informatique de gestion bancaire, dans un cadre pédagogique, en utilisant Python (Programmation Orientée Objet) et une interface graphique.
 
-Questions
-1. En utilisant le formalisme du diagramme de classes UML proposez un modèle
-du domaine.
-Vous ferez apparaître sur ce modèle les attributs et les méthodes qui vous
-semblent pertinents. Afin de ne pas surcharger le modèle, ne représentez pas
-les constructeurs et les méthodes get/set.
-2. Traduisez le modèle précédent dans le langage python pour obtenir le
-squelette des classes de l'application.
-3. Ajouter une interface graphique permettant :
-- - Identification de l’utilisateur avec un numéro de compte et un mot de
-passe
-- - Consultation d’un compte
-- - Affichage de l’historique des 10 dernières transactions du mois en cours
-- - Télécharger un relevé de compte en PDF
+📅 Objectif pédagogique
+
+Réaliser un projet complet intégrant les compétences suivantes :
+
+Conception UML (diagramme de classes)
+
+Programmation orientée objet avec Python
+
+Mise en oeuvre d'une interface graphique
+
+Génération de documents PDF
+
+🔹 Fonctionnalités
+
+Gérer un ensemble de clients (nom, adresse)
+
+Gérer un ensemble de comptes (courant ou sur livret)
+
+Réaliser les opérations suivantes :
+
+Ouverture de compte
+
+Crédit et débit d’un compte
+
+Virement d’un compte A vers un compte B
+
+Calcul et crédit des intérêts (compte sur livret uniquement)
+
+Génération d’un relevé mensuel
+
+📑 Contraintes
+
+Les montants manipulés sont des entiers (euros).
+
+Aucun compte ne peut avoir un solde négatif.
+
+Les intérêts sont calculés avec la formule : solde * taux / 100.
+
+Un client peut posséder plusieurs comptes, mais un compte appartient à un seul client.
+
+🔹 Interface graphique
+
+L’interface graphique permet les actions suivantes :
+
+Identification d’un client via son numéro de compte + mot de passe
+
+Consultation des soldes et opérations d’un compte
+
+Affichage des 10 dernières opérations du mois courant
+
+Export des relevés de compte en PDF
+
+📄 Structure technique
+
+Langage : Python 3.x
+
+Interface GUI : tkinter (ou PyQt5 selon la version)
+
+PDF : fpdf2 ou reportlab
+
+
+🎓 Auteurs
+
+Projet réalisé dans le cadre du TD3 de Programmation Orientée Objet (IATIC3 ISTY).
+
+Encadrant : [Nom de l’enseignant]Réalisé par : [Ton nom ici]
+
+📊 Avancement
+
+
+
+📅 Dépendances
+
+fpdf2 (PDF)
+
+tkinter (inclus avec Python)
+
+datetime, uuid, os
+
+🔗 Licence
+
+Projet à but pédagogique - Tous droits réservés ISTY Université Paris-Saclay.
