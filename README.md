@@ -1,88 +1,40 @@
-Projet Python - Gestion bancaire simplifiée
+# 💸 Gestion Bancaire – Projet Python POO (ISTY / IATIC3)
 
-En Cadre de ma formation ISTY / IATIC3 / POO / Python / TD3
+Ce projet a été réalisé dans le cadre du TD3 de Programmation Orientée Objet (Python) à l'ISTY. Il simule une application bancaire permettant la gestion de comptes et d'opérations pour plusieurs clients.
 
-Ce projet a pour but d'analyser, concevoir et implémenter partiellement un système informatique de gestion bancaire, dans un cadre pédagogique, en utilisant Python (Programmation Orientée Objet) et une interface graphique.
+## 🧠 Objectif du projet
 
-📅 Objectif pédagogique
+Développer une application en Python respectant les principes de la programmation orientée objet, avec une interface graphique intuitive et une fonctionnalité d’export des relevés en PDF.
 
-Réaliser un projet complet intégrant les compétences suivantes :
+## ⚙️ Fonctionnalités principales
 
-Conception UML (diagramme de classes)
+- Création de comptes bancaires (courants et livrets)
+- Association de comptes à des clients (nom, adresse)
+- Dépôts et retraits d’argent
+- Virements entre comptes
+- Crédit automatique d’intérêts pour les comptes sur livret
+- Génération de relevés mensuels PDF
+- Historique des opérations
 
-Programmation orientée objet avec Python
+## 🖥️ Interface utilisateur
 
-Mise en oeuvre d'une interface graphique
+L'application permet :
 
-Génération de documents PDF
+- L’identification du client (numéro de compte + mot de passe)
+- La consultation du solde et de l’historique des 10 dernières opérations du mois en cours
+- L’export d’un relevé de compte en format PDF
 
-🔹 Fonctionnalités
+## 📌 Contraintes
 
-Gérer un ensemble de clients (nom, adresse)
+- Les montants sont exprimés en euros (entiers)
+- Aucun compte ne peut avoir un solde négatif
+- Les intérêts sont calculés avec : `montant = solde * taux / 100`
 
-Gérer un ensemble de comptes (courant ou sur livret)
+## 🛠️ Technologies utilisées
 
-Réaliser les opérations suivantes :
+- Python 3
+- Interface graphique : `tkinter`
+- Génération PDF : `fpdf2` *(ou `reportlab`)*
+- Modules standards : `datetime`, `uuid`, `os`
 
-Ouverture de compte
-
-Crédit et débit d’un compte
-
-Virement d’un compte A vers un compte B
-
-Calcul et crédit des intérêts (compte sur livret uniquement)
-
-Génération d’un relevé mensuel
-
-📑 Contraintes
-
-Les montants manipulés sont des entiers (euros).
-
-Aucun compte ne peut avoir un solde négatif.
-
-Les intérêts sont calculés avec la formule : solde * taux / 100.
-
-Un client peut posséder plusieurs comptes, mais un compte appartient à un seul client.
-
-🔹 Interface graphique
-
-L’interface graphique permet les actions suivantes :
-
-Identification d’un client via son numéro de compte + mot de passe
-
-Consultation des soldes et opérations d’un compte
-
-Affichage des 10 dernières opérations du mois courant
-
-Export des relevés de compte en PDF
-
-📄 Structure technique
-
-Langage : Python 3.x
-
-Interface GUI : tkinter (ou PyQt5 selon la version)
-
-PDF : fpdf2 ou reportlab
-
-
-🎓 Auteurs
-
-Projet réalisé dans le cadre du TD3 de Programmation Orientée Objet (IATIC3 ISTY).
-
-Encadrant : [Nom de l’enseignant]Réalisé par : [Ton nom ici]
-
-📊 Avancement
-
-
-
-📅 Dépendances
-
-fpdf2 (PDF)
-
-tkinter (inclus avec Python)
-
-datetime, uuid, os
-
-🔗 Licence
-
-Projet à but pédagogique - Tous droits réservés ISTY Université Paris-Saclay.
+## 👥  Dev@Drr31
